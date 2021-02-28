@@ -114,7 +114,8 @@ venv.bak/
 .spyderproject
 .spyproject
 
-migrations/
+
+*/migrations/
 
 # Rope project settings
 .ropeproject
