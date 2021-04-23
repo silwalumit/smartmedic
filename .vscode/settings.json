@@ -5,5 +5,6 @@
     "editor.fontFamily": "Fira Code",
     "editor.fontWeight": "500",
     "editor.fontSize": 16,
-    "editor.fontLigatures":"'zero', 'ss02', 'ss03', 'ss04', 'ss05', 'calt'",
+    "editor.fontLigatures": "'zero', 'ss02', 'ss03', 'ss04', 'ss05', 'calt'",
+    "python.pythonPath": "venv/bin/python",
 }

@@ -135,4 +135,5 @@ dmypy.json
 
 
 *.code-workspace
-migrations/
+node_modules/
+static_cdn/
