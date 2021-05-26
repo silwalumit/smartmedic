@@ -1,0 +1,8 @@
+table{
+    position:relation
+}
+
+th{
+    position: sticky;
+    top:0;
+}

@@ -17,7 +17,7 @@ export const Input = props => {
         <input
             type = {props.type ? props.type : 'text'}
             placeholder = {props.placeholder}
-            className={`form-control ${props.classess}`}
+            className={`form-control ${props.classes}`}
             autoComplete="off"
             id={props.placeholder.toLowerCase()}
             onKeyPress = {validate}

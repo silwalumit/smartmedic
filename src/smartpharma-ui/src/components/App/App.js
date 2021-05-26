@@ -1,3 +1,4 @@
+import './style.css';
 import React, { Suspense, lazy } from "react";
 import {
     BrowserRouter as Router,
@@ -8,6 +9,7 @@ import PublicRoute from "../common/PublicRoute";
 import PrivateRoute from "../common/ProtectedRoute";
 const Login = lazy(() => import('../Login/Login'));
 const Home = lazy(() => import('../Home/Home'));
+
 
 const App = () => {
     return (

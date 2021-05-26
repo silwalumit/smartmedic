@@ -30,14 +30,14 @@ class Login extends Component {
             <div className={styles.container}>
                 <div className={styles.loginForm}>
                     <form onSubmit={this.handleSubmit} noValidate>
-                        <Container classess="mb-2" >
+                        <Container classes="mb-2" >
                             <Input
                                 pattern = "[a-zA-Z]"
                                 label="username"
                                 placeholder="username"
                                 valueChanged={value => this.handleChange('username', value)} />
                         </Container>
-                        <Container classess="mb-2" >
+                        <Container classes="mb-2" >
                             <Input
                                 type="password"
                                 label="password"
