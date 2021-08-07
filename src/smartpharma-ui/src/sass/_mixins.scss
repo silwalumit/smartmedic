@@ -1,0 +1,24 @@
+@mixin create-mq($breakpoint) {
+    @if($breakpoint=0) {
+        @content;
+    }
+
+    @else {
+        @media screen and (min-width:$breakpoint * 1px) {
+            @content
+        }
+    }
+
+}
+
+@mixin create-cols($modifier, $cols, $breakpoint) {
+    @include create-mq($breakpoint) {
+        @for $i from 1 through $cols {
+            .col-#{$modifier}-#{$i} {
+                width: (100 / ($cols / $i)) * 1%;
+                flex:0 0 auto;
+            }
+        }
+    }
+}
+

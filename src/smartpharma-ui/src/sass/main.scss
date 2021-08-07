@@ -1,0 +1,72 @@
+@import './variables';
+@import './mixins';
+
+
+* {
+    font-family:$font-family;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color:#fff;
+}
+.container-fluid {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+.mb-3{
+    margin-bottom: $spacer;
+}
+.pt-3{
+    padding-top: 16px;
+}
+.px-3{
+    padding-right:$spacer;
+    padding-left: $spacer;
+}
+.py-3{
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+}
+.pb-3{
+    padding-bottom: $spacer;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #dee2e6!important; 
+}
+
+@each $modifier,$breakpoint in $grid-breakpoints {
+    @include create-cols($modifier, $grid-columns, $breakpoint)
+}
+
+.position-sticky{
+    position:sticky !important;
+}
+
+.h2, h2 {
+    display: block;
+    font-size: 2rem;
+}
+// flex css
+
+.d-flex{
+    display: flex !important;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.flex-column {
+    flex-direction: column!important;
+}

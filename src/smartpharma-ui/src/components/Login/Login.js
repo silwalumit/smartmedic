@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from '../common/Container';
-import { Input } from '../common/Input';
+import Button from '../common/Form/Button';
+import { Input } from '../common/Form/Input';
 import styles from './loginStyle.module.css'
 
 class Login extends Component {
@@ -33,19 +34,21 @@ class Login extends Component {
                         <Container classes="mb-2" >
                             <Input
                                 pattern = "[a-zA-Z]"
-                                label="username"
-                                placeholder="username"
+                                label="Username"
+                                placeholder="Username"
                                 valueChanged={value => this.handleChange('username', value)} />
                         </Container>
                         <Container classes="mb-2" >
                             <Input
                                 type="password"
-                                label="password"
-                                placeholder="password"
+                                label="Password"
+                                placeholder="Password"
                                 valueChanged={value => this.handleChange('password', value)} />
                         </Container>
-
-                        <button disabled={this.disabled()} className={`w-100 btn btn-lg ${this.disabled() ? 'btn-secondary' : 'btn-primary'}`} type="submit">Sign in</button>
+                        <Button
+                            role ="submit"
+                            label="Sign in"
+                            disabled={this.disabled()} />
                     </form>
                 </div>
             </div>

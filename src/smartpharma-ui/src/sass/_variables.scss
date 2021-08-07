@@ -1,0 +1,40 @@
+$primary-color:rgba(52, 73, 94, 1);
+$secondary-color: #2ecc71;
+$default-color:#cccccc;
+$danger-color:#e74c3c;
+
+$primary-text:#333;
+$spacer:1rem;
+
+$font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+$spacer: 1rem !default;
+$spacers: (
+    0: 0,
+    1: $spacer / 4,
+    2: $spacer / 2,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+) !default;
+
+
+$container-max-widths: (sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1320px) !default;
+
+$grid-breakpoints: (xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px) !default;
+
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 1.5rem !default;
+
+$sides: (l, r, t, b, x, y);
+

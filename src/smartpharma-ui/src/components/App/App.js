@@ -1,9 +1,9 @@
-import './style.css';
 import React, { Suspense, lazy } from "react";
 import {
     BrowserRouter as Router,
     Switch,
-} from 'react-router-dom'
+} from 'react-router-dom';
+import '../../sass/main.scss';
 
 import PublicRoute from "../common/PublicRoute";
 import PrivateRoute from "../common/ProtectedRoute";

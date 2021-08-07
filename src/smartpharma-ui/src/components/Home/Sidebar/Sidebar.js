@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import routes from './routes';
-import './sidebar.css';
+import './sidebar.scss';
     
 function Sidebar(props) {
     return (
-        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-            <div class="position-sticky pt-3">
-                <ul class="nav flex-column">
+        <nav className="col-md-3 col-lg-2 sidebar ">
+            <div className="sidebar-sticky pt-3">
+                <ul className="nav flex-column">
                     {routes.map((route, index)=>(
                         <li className="nav-item" key={index}>
                             <NavLink

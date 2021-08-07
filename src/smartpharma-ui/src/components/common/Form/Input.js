@@ -1,5 +1,5 @@
 import * as React from 'react';
-
+import '../../../sass/input.scss'
 
 export const Input = props => {
     const validate = (e)=>{
@@ -19,7 +19,6 @@ export const Input = props => {
             placeholder = {props.placeholder}
             className={`form-control ${props.classes}`}
             autoComplete="off"
-            id={props.placeholder.toLowerCase()}
             onKeyPress = {validate}
             onChange={e => {
                 e.preventDefault();
@@ -31,9 +30,15 @@ export const Input = props => {
 
     return (
         props.label ? (
-            <div className="form-floating">
+            <div className="floating-label">
                 {inputField()}
-                <label htmlFor = {props.placeholder.toLowerCase()}>{props.label}</label>
+                {!props.noFloat && <label>{props.label}</label>}
+                <span className="focus-border"></span>
+                {props.error && (
+                    <div className="invalid-feedback">
+                        { props.error}
+                    </div>
+                )}
             </div>
         ) : inputField()
 

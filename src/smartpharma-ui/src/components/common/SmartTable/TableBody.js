@@ -1,8 +1,8 @@
 import React from 'react';
-import Checkbox from '../Checkbox';
+import Checkbox from '../Form/Checkbox';
 import headerTypes from './constants';
 
-const TableBody = (props) => {
+const TableRow = (props) => {
     const { headers, data } = props;
     return (
         <tr>
@@ -16,4 +16,4 @@ const TableBody = (props) => {
     )
 }
 
-export default TableBody
+export default TableRow

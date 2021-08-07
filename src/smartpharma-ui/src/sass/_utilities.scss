@@ -1,0 +1,37 @@
+$utilities: (
+    "margin":(
+        property:margin,
+        class:m,
+        values: map.merge($spacer, (auto:auto))
+    ),
+    "margin-x":(
+        class:mx,
+        property:margin-right margin-left,
+        values:map.merge($spacer, (auto:auto))
+    ),
+    "margin-y":(
+        class:my,
+        property: margin-top margin-bottom,
+        values: map.merge($spacer, (auto:auto))
+    ),
+    "margin-top": (
+        property: margin-top,
+        class: mt,
+        values: map-merge($spacers, (auto: auto))
+    ),
+    "margin-bottom": (
+        property: margin-bottom,
+        class: mb,
+        values: map-merge($spacers, (auto: auto))
+    ),
+    "margin-left": (
+        property: margin-top,
+        class: ml,
+        values: map-merge($spacers, (auto: auto))
+    ),
+    "margin-right": (
+        property: margin-bottom,
+        class: mr,
+        values: map-merge($spacers, (auto: auto))
+    ),
+);

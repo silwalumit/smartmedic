@@ -1,14 +1,16 @@
 import React from 'react'
-import Checkbox from '../Checkbox'
+import Checkbox from '../Form/Checkbox'
 
 const TableHead = (props) => {
     return (
         <thead>
-            <tr>
-                {props.headers.map((header, index) => (
-                    <th key={index}>
+            <tr className = "table-dark">
+                {props.headers.map((header, key) => (
+                    <th key={key}>
                         {header.selectable ? (
-                            <Checkbox checked={header.selected} />
+                            <Checkbox
+                                checked={header.selected}
+                                onClick={e => header.onChange(!header.selected)} />
                         ) : header.label}
                     </th>
                 ))}

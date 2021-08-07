@@ -1,0 +1,78 @@
+@import "./_variables";
+
+.floating-label {
+    margin: 0 5px;
+    width:100%;
+    position: relative;
+}
+
+.form-control {
+    outline: none;
+    color: $primary-text;
+    letter-spacing: 1px;
+    border: 0;
+    padding: 8px 0;
+    width:100%;
+    border-bottom: 1px solid $default-color;
+    background-color: transparent;
+
+    & .form-control-sm {
+        padding: 5px 0;
+    }
+
+    &~label {
+        position: absolute;
+        left: 0;
+        top: 9px;
+        width: 100%;
+        color: #aaa;
+        z-index: -1;
+        letter-spacing: 0.5px;
+        transition: .3s;
+    }
+
+    &~.focus-border {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $primary-color;
+        transition: 0.3s;
+    }
+
+    &:focus~.focus-border,
+    &:not(:placeholder-shown)~.focus-border {
+        width: 100%;
+        transition: 0.4s;
+    }
+
+    &:focus~label,
+    &:not(:placeholder-shown)~label {
+        top: -16px;
+        font-size: 14px;
+        color: $primary-color;
+        transition: 0.3s;
+        z-index: 1;
+    }
+
+    &.error {
+        color: $danger-color;
+    }
+
+    &.error:focus~.focus-border,
+    &.error:not(:placeholder-shown)~.focus-border {
+        width: 100%;
+        transition: 0.4s;
+        background-color: $danger-color;
+    }
+
+    &.error:focus~label,
+    &.error:not(:placeholder-shown)~label {
+        top: -16px;
+        font-size: 14px;
+        color: $danger-color;
+        transition: 0.3s;
+        z-index: 1;
+    }
+}

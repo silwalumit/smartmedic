@@ -1,0 +1,31 @@
+@import '../../../sass/variables';
+
+.navbar{
+    position:sticky;
+    top: 0;
+    background: $primary-color; //#333
+    padding: 10px 0;
+    box-shadow: 0 2px 15px 14px rgba(255,255,255,0.8);
+    z-index:1020;
+    & .floating-label{
+        width:100%;
+
+        & > input {
+            color:#fff;
+        }
+    }
+
+    & .form-control-dark{
+        color:lightgray;
+    }
+
+    & .navbar-brand{
+        display: inline-block;
+        letter-spacing: 0.077rem;
+        padding-top: 5px;
+        font-size: 20px;
+        padding-left:20px;
+        text-transform: capitalize;
+    }
+}
+
